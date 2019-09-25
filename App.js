@@ -24,7 +24,6 @@ export default class App extends React.Component {
       weight: 'N/A',
       hairColor: 'N/A',
       eyeColor: 'N/A',
-      skinColor: 'N/A',
     },
     buttonText: 'Show me your ID Card!',
     loading: false,
@@ -34,7 +33,7 @@ export default class App extends React.Component {
     this.getJedi();
 
     // Example of how to change state
-    // let newJedi = { name: 'Darth Vader', gender: 'Male', birthYear: '41.9BBY', height: '202cm', weight: '136kg', eyeColor: 'yellow', hairColor: 'none', skinColor: 'white' };
+    // let newJedi = { name: 'Darth Vader', gender: 'Male', birthYear: '41.9BBY', height: '202cm', weight: '136kg', eyeColor: 'yellow', hairColor: 'none' };
     // this.setState({jedi: newJedi}); //never change state directly, always use this
   }
 
@@ -54,7 +53,6 @@ export default class App extends React.Component {
       // Cleaning up our response...
       let cleanObject = responseJson;
       cleanObject.hairColor = responseJson.hair_color;
-      cleanObject.skinColor = responseJson.skin_color;
       cleanObject.eyeColor = responseJson.eye_color;
       cleanObject.birthYear = responseJson.birth_year;
       cleanObject.weight = responseJson.mass;
